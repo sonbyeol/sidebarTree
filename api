@@ -1,0 +1,21 @@
+@GetMapping("/trees")
+    public List<Map<String, Object>> getTrees() {
+        return Arrays.asList(
+                Map.of(
+                        "label", "adapter1",
+                        "items", Arrays.asList(
+                                Map.of("label", "interface1", "value", Map.of("id", "interface1")),
+                                Map.of("label", "interface2", "value", Map.of("id", "interface2"))
+                        )
+                ),
+                Map.of(
+                        "label", "adapter2",
+                        "items", Arrays.asList(
+                                Map.of("label", "interface3", "value", Map.of("id", "interface3")),
+                                Map.of("label", "interface4", "value", Map.of("id", "interface4")),
+                                Map.of("label", "interface5", "value", Map.of("id", "interface5")),
+                                Map.of("label", "interface6", "value", Map.of("id", "interface6"))
+                        )
+                )
+        );
+    }
